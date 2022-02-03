@@ -5,6 +5,7 @@ import { UserContextProvider } from "./contexts/auth";
 import PrivateRoute from "./components/PrivateRoute";
 import Admin from "./pages/Admin";
 import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 
 function App() {
 	return (
