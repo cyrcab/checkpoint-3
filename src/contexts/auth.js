@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const UserContext = createContext();
+const Auth = createContext();
 
 export default UserContext;
 
