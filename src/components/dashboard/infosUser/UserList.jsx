@@ -12,14 +12,14 @@ const UserList = () => {
 			.then((res) => res.data)
 			.then((user) => setUserList(user))
 			.catch((err) => console.log(err));
-	}, []);
+	}, [userList]);
 
 	return (
 		<ListContainer>
 			{userList
 				.filter((user) => user.roleId === 2)
 				.map((user) => (
-					<User {...user} />
+					<User user={user} userList={userList} setUserList={setUserList} />
 				))}
 		</ListContainer>
 	);
@@ -28,8 +28,8 @@ const UserList = () => {
 const ListContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
-  background-color: var(--main-color);
-  padding: 2em;
+	background-color: var(--main-color);
+	padding: 2em;
 `;
 
 export default UserList;

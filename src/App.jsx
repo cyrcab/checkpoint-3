@@ -7,6 +7,7 @@ import Admin from "./pages/Admin";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import UserList from "./components/dashboard/infosUser/UserList";
+import ResaList from "./components/dashboard/reservationsInfos/ResaList";
 
 function App() {
 	return (
@@ -17,7 +18,7 @@ function App() {
 				<Route path='/signup' element={<CreateAccount />} />
 				<Route path='/admin' element={<Admin />} />
 				<Route path='/admin/users' element={<UserList />} />
-				<Route path='/admin/reservations' element={<Admin />} />
+				<Route path='/admin/reservations' element={<ResaList />} />
 				<Route path='/profile' element={<Profile />} />
 			</Routes>
 		</UserContextProvider>

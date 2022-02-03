@@ -1,7 +1,20 @@
 import styled from "styled-components";
 import { BiUserCircle } from "react-icons/all";
+import axios from "axios";
 
-const CardInfoUser = ({ lastname, firstname, mail }) => {
+const CardInfoUser = ({ user, userList, setUserList }) => {
+	const { lastname, firstname, mail, id } = user;
+	const handleDeleteUser = (userId) => {
+		axios
+			.delete(`http://localhost:5001/api/users/${userId}`)
+			.then((res) => res)
+			.catch((err) => console.log(err));
+
+		const userToDelete = userList.filter((user) => user.id === userId);
+		if (userList.includes(userToDelete)) {
+			setUserList(userList.filter((user) => user.id !== userToDelete.id));
+		}
+	};
 	return (
 		<Container>
 			<Header>
@@ -16,7 +29,7 @@ const CardInfoUser = ({ lastname, firstname, mail }) => {
 					<Infouser>mail: {mail}</Infouser>
 				</InfosUsersContainer>
 				<ButtonContainer>
-					<DeleteButton>Delete</DeleteButton>
+					<DeleteButton onClick={() => handleDeleteUser(id)}>Delete</DeleteButton>
 				</ButtonContainer>
 			</Content>
 		</Container>
