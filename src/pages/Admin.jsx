@@ -1,4 +1,4 @@
-import Dashboard from "../components/dashboard/Index";
+import Dashboard from "../components/dashboard/navigation/Index";
 
 const Admin = () => {
 	return <Dashboard />;
