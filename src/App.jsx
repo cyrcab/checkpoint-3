@@ -6,6 +6,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Admin from "./pages/Admin";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
+import UserList from "./components/dashboard/infosUser/UserList";
 
 function App() {
 	return (
@@ -15,6 +16,8 @@ function App() {
 				<Route path='/login' element={<Connection />} />
 				<Route path='/signup' element={<CreateAccount />} />
 				<Route path='/admin' element={<Admin />} />
+				<Route path='/admin/users' element={<UserList />} />
+				<Route path='/admin/reservations' element={<Admin />} />
 				<Route path='/profile' element={<Profile />} />
 			</Routes>
 		</UserContextProvider>

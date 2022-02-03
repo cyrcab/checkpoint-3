@@ -1,19 +1,38 @@
 import styled from "styled-components";
 
-const CardInfo = ({ date, nbrPerson }) => {
+const CardInfoResa = ({ date, nbrPerson }) => {
 	return (
 		<Container>
-			<header>
-				<Titre value='reservation' />
-			</header>
-			<main>
-				<DateContainer date={date} />
-				<InfosUsers nbrPerson={nbrPerson} />
-				<ButtonContainer />
-			</main>
+			<Header>
+				<Title></Title>
+			</Header>
+			<Content>
+				<DateContainer>{date}</DateContainer>
+				<InfosUsers>{nbrPerson}</InfosUsers>
+				<ButtonContainer>
+					<ConfirmButton />
+					<DeleteButton />
+				</ButtonContainer>
+			</Content>
 		</Container>
 	);
 };
 
+const Header = styled.header``;
+
+const Title = styled.h2``;
+
+const Content = styled.div``;
+
 const Container = styled.div``;
-export default CardInfo;
+
+const ButtonContainer = styled.footer``;
+
+const ConfirmButton = styled.button``;
+
+const DeleteButton = styled.button``;
+
+const DateContainer = styled.div``;
+
+const InfosUsers = styled.div``;
+export default CardInfoResa;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ToolBox from "../globalInfos/ToolBox";
-import Sidebar from "./Sidebar";
+import ToolBox from "./globalInfos/ToolBox";
+import Sidebar from "./navigation/Sidebar";
 
 const Dashboard = () => {
 	return (
