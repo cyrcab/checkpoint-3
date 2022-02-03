@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Connection from "./pages/Connexion";
-import CreateAccount from "./pages/CreateAccount";
+import CreateAccount from "./pages/Register";
 import Hello from "./pages/Hello";
 
 function App() {
