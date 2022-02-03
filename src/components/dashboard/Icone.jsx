@@ -8,10 +8,13 @@ const Icone = (/*{Img}*/) => {
 	);
 };
 
-const ImgContainer = styled.div``;
+const ImgContainer = styled.div`
+  padding-top: 2em;
+`;
 
-const ImgProfile = styled.img`
-	width: 20px;
-	height: 20px;
+const ImgProfile = styled.div`
+	width: 120px;
+	height: 120px;
+  background-color: red;
 `;
 export default Icone;
