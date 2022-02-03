@@ -1,11 +1,16 @@
-import Sidebar from "./Sidebar";
+import styled from "styled-components";
+import ToolBox from "./ToolBox";
 
-const Dashboard = ({ userName }) => {
+const Dashboard = () => {
 	return (
-		<>
-			<Sidebar />
-		</>
+		<MainContainer >
+			<ToolBox />
+		</MainContainer>
 	);
 };
+
+const MainContainer = styled.div`
+	display: flex;
+`;
 
 export default Dashboard;

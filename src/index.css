@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&family=Poppins:wght@600&display=swap');
+
+:root {
+	--sidebar-color: #2e2f2f;
+	--main-color: rgb(221, 228, 227);
+	--main-light-color: rgba(221, 228, 227, 0.7);
+	--secondary-color: #EF7B45;
+	--secondary-light-color: rgba(239, 123, 69, 0.7);
+	--text-dark-color: #051014;
+	--text-light-color: #fefefe;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
 	list-style: none;
+	font-family: 'Exo', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
