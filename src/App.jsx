@@ -14,8 +14,8 @@ function App() {
 				<Route exact path='/' element={<Home />} />
 				<Route path='/login' element={<Connection />} />
 				<Route path='/signup' element={<CreateAccount />} />
-				<PrivateRoute path='/admin' element={<Admin />} />
-				<PrivateRoute path='/profile' element={<Profile />} />
+				<Route path='/admin' element={<Admin />} />
+				<Route path='/profile' element={<Profile />} />
 			</Routes>
 		</UserContextProvider>
 	);
