@@ -1,11 +1,16 @@
+import { Routes, Route } from "react-router-dom";
+import Connection from "./pages/Connexion";
+import CreateAccount from "./pages/CreateAccount";
+import Hello from "./pages/Hello";
 
 function App() {
-
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
-  )
+	return (
+		<Routes>
+			<Route exact path='/' element={<Hello />} />
+			<Route path='/login' element={<Connection />} />
+			<Route path='/signup' element={<CreateAccount />} />
+		</Routes>
+	);
 }
 
-export default App
+export default App;
