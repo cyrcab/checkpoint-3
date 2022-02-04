@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const UserList = () => {
 	const [userList, setUserList] = useState([]);
+	const [userToDelete, setUserToDelete] = useState([]);
 
 	useEffect(() => {
 		axios
@@ -12,14 +13,19 @@ const UserList = () => {
 			.then((res) => res.data)
 			.then((user) => setUserList(user))
 			.catch((err) => console.log(err));
-	}, [userList]);
+	}, [userToDelete]);
 
 	return (
 		<ListContainer>
 			{userList
 				.filter((user) => user.roleId === 2)
 				.map((user) => (
-					<User user={user} userList={userList} setUserList={setUserList} />
+					<User
+						user={user}
+						userList={userList}
+						setUserList={setUserList}
+						setUserToDelete={setUserToDelete}
+					/>
 				))}
 		</ListContainer>
 	);
