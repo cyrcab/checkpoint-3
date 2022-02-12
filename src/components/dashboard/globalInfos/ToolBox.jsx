@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import ResaGraph from "../resaGraph/ResaGraph";
+import GraphContainer from "../resaGraph/GraphContainer";
 
 const ToolBox = () => {
 	return (
 		<Container>
 			<h2>ToolBox</h2>
-			<ResaGraph />
+			<GraphContainer />
 		</Container>
 	);
 };
