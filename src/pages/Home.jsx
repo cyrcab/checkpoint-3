@@ -1,7 +1,9 @@
+import IndexPage from "../components/site/IndexPage";
+
 const Home = () => {
 	return (
 		<>
-			<h1>Hello</h1>
+			<IndexPage />
 		</>
 	);
 };
