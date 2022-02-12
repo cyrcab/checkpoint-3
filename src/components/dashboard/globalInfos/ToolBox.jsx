@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import GraphContainer from "../resaGraph/GraphContainer";
+import GraphContainer from "../graphs/resaGraph/GraphContainer";
 
 const ToolBox = () => {
 	return (
