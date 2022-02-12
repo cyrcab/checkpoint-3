@@ -1,12 +1,12 @@
+import { Outlet } from "react-router-dom";
 import styled from "styled-components";
-import ToolBox from "./globalInfos/ToolBox";
 import Sidebar from "./navigation/Sidebar";
 
 const Dashboard = () => {
 	return (
 		<MainContainer>
 			<Sidebar />
-			<ToolBox />
+			<Outlet />
 		</MainContainer>
 	);
 };

@@ -5,13 +5,14 @@ import Resa from "../cardStyle/Resa";
 
 const ResaList = () => {
 	const [resaList, setResaList] = useState([]);
+	const [resaToDelete, setResaToDelete] = useState([]);
 
 	useEffect(() => {
 		axios
 			.get("http://localhost:5001/api/reservations")
 			.then((res) => res.data)
 			.then((reservation) => setResaList(reservation));
-	}, [resaList]);
+	}, [resaToDelete]);
 
 	return (
 		<ListContainer>
@@ -22,6 +23,7 @@ const ResaList = () => {
 					id={resa.id}
 					resaList={resaList}
 					setResaList={setResaList}
+					setResaToDelete={setResaToDelete}
 				/>
 			))}
 		</ListContainer>
@@ -34,6 +36,7 @@ const ListContainer = styled.div`
 	background-color: var(--main-color);
 	padding: 2em;
 	flex-wrap: wrap;
+	width: 80%;
 `;
 
 export default ResaList;

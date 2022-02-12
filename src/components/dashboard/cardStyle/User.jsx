@@ -17,11 +17,6 @@ const CardInfoUser = ({ user, userList, setUserList, setUserToDelete }) => {
 			.catch((err) => console.log(err));
 	};
 
-	// const userToDelete = userList.filter((user) => user.id === userId);
-	// if (userList.includes(userToDelete)) {
-	// 	setListToDisplay(userList.filter((user) => user.id !== userToDelete.id));
-	// }
-
 	return (
 		<Container>
 			<Header>

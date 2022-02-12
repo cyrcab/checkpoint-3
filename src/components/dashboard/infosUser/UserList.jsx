@@ -33,6 +33,7 @@ const UserList = () => {
 
 const ListContainer = styled.div`
 	display: flex;
+	width: 80%;
 	justify-content: space-between;
 	background-color: var(--main-color);
 	padding: 2em;

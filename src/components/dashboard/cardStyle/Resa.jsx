@@ -1,18 +1,19 @@
 import styled from "styled-components";
 import axios from "axios";
 
-const CardInfoResa = ({ date, nbrPerson, id, resaList, setResaList }) => {
+const CardInfoResa = ({ date, nbrPerson, id, resaList, setResaList, setResaToDelete }) => {
 	const handleDeleteReservation = (resaId) => {
 		axios
 			.delete(`http://localhost:5001/api/reservations/${resaId}`)
-			.then((res) => res)
+			.then((res) => res.data)
+			.then((resaDeleted) => {
+				setResaToDelete(resaDeleted);
+				return resaDeleted;
+			})
+			.then((resaDeleted) => setResaList(resaList.filter((resa) => resa.id !== resaDeleted)))
 			.catch((err) => console.log(err));
-
-		const resaToDelete = resaList.filter((resa) => resa.id === resaId);
-		if (resaList.includes(resaToDelete)) {
-			setResaList(resaList.filter((resa) => resa.id !== resaToDelete.id));
-		}
 	};
+	
 	return (
 		<Container>
 			<Header>

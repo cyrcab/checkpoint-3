@@ -1,28 +1,35 @@
 import styled from "styled-components";
 import { MdOutlineDashboard, MdOutlinePeopleAlt, ImProfile } from "react-icons/all";
+import { Link } from "react-router-dom";
 
 const LinkContainer = () => {
 	return (
 		<Container>
 			<ListContainer>
-				<ElemList>
-					<IconContainer>
-						<MdOutlineDashboard />
-					</IconContainer>
-					Accueil
-				</ElemList>
-				<ElemList>
-					<IconContainer>
-						<ImProfile />
-					</IconContainer>
-					Réservations
-				</ElemList>
-				<ElemList>
-					<IconContainer>
-						<MdOutlinePeopleAlt />
-					</IconContainer>
-					Clients habitués
-				</ElemList>
+				<Link to="/admin">
+					<ElemList>
+						<IconContainer>
+							<MdOutlineDashboard />
+						</IconContainer>
+						Accueil
+					</ElemList>
+				</Link>
+				<Link to="/admin/reservations">
+					<ElemList>
+						<IconContainer>
+							<ImProfile />
+						</IconContainer>
+						Réservations
+					</ElemList>
+				</Link>
+				<Link to="/admin/users">
+					<ElemList>
+						<IconContainer>
+							<MdOutlinePeopleAlt />
+						</IconContainer>
+						Clients habitués
+					</ElemList>
+				</Link>
 			</ListContainer>
 		</Container>
 	);
@@ -55,6 +62,6 @@ const ElemList = styled.li`
 `;
 
 const IconContainer = styled.div`
-  margin-right: 1em;
+	margin-right: 1em;
 `;
 export default LinkContainer;
